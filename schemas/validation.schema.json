@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/validation.schema.json",
+  "title": "Verilogix Validation",
+  "description": "Canonical schema for validation records within Verilogix Core.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "validationId",
+    "validationType",
+    "scope",
+    "rule",
+    "result",
+    "validator",
+    "createdAt"
+  ],
+  "properties": {
+    "validationId": {
+      "type": "string",
+      "pattern": "^VAL-[0-9]{4}-[0-9]{5}$"
+    },
+    "validationType": {
+      "type": "string",
+      "enum": [
+        "Document",
+        "Evidence",
+        "Technical",
+        "Operational",
+        "Risk",
+        "Commercial",
+        "AI-Assisted"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["Project", "Stage", "Activity", "Deliverable", "Document", "Assessment", "Approval Request"]
+    },
+    "rule": {
+      "type": "string",
+      "description": "Explicit validation rule being evaluated."
+    },
+    "ruleSetId": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "CONDITIONAL PASS", "INSUFFICIENT EVIDENCE", "ESCALATE"]
+    },
+    "validator": {
+      "type": "string"
+    },
+    "validatorType": {
+      "type": "string",
+      "enum": ["Human", "Automated", "AI"]
+    },
+    "evidenceIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "description"],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": ["Minor", "Major", "Critical"]
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "default": []
+    },
+    "conditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "linkedProjectId": {
+      "type": "string"
+    },
+    "linkedStageId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
