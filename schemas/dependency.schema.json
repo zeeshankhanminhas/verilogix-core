@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/dependency.schema.json",
+  "title": "Verilogix Dependency",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dependencyId",
+    "dependencyName",
+    "dependencyType",
+    "scope",
+    "status",
+    "owner",
+    "severity"
+  ],
+  "properties": {
+    "dependencyId": {
+      "type": "string",
+      "pattern": "^DEP-[0-9]{4}-[0-9]{5}$"
+    },
+    "dependencyName": {
+      "type": "string"
+    },
+    "dependencyType": {
+      "type": "string",
+      "enum": [
+        "Document",
+        "Evidence",
+        "Validation",
+        "Approval",
+        "Resource",
+        "Qualification",
+        "Financial",
+        "Risk"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["Project", "Stage", "Validation", "Approval", "Risk", "Activity", "Deliverable"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Pending", "Submitted", "Under Review", "Satisfied", "Unsatisfied", "Expired", "Waived"]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Critical", "Major", "Minor", "Informational"]
+    },
+    "evidenceIds": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "validationIds": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "approvalIds": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "expiryDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "waiverReason": {
+      "type": "string"
+    }
+  }
+}
