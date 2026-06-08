@@ -1,0 +1,168 @@
+{
+  "project": {
+    "projectId": "RF-2026-001",
+    "projectName": "Hunza Expedition Qualification",
+    "frameworkId": "FW-RF",
+    "projectType": "Expedition",
+    "purpose": "Determine whether a traveller is suitable for a governed expedition experience.",
+    "owner": "Operations Manager",
+    "stakeholders": [
+      "Traveller",
+      "Guide Coordinator",
+      "Commercial Manager"
+    ],
+    "status": "Active",
+    "currentStageId": "RF-001",
+    "stageHistory": [],
+    "dependencyIds": [
+      "DEP-2026-00001"
+    ],
+    "evidenceIds": [
+      "EV-2026-00001"
+    ],
+    "validationIds": [
+      "VAL-2026-00001"
+    ],
+    "approvalIds": [
+      "APR-2026-00001"
+    ],
+    "riskIds": [],
+    "intelligenceIds": [
+      "INT-2026-00001"
+    ],
+    "createdAt": "2026-06-08T12:00:00Z",
+    "updatedAt": "2026-06-08T12:30:00Z"
+  },
+  "stage": {
+    "stageId": "RF-001",
+    "stageName": "Traveller Qualification",
+    "purpose": "Confirm whether the traveller meets the minimum suitability requirements for the expedition.",
+    "owner": "Operations Manager",
+    "entryCriteria": [
+      "Lead submitted",
+      "Traveller profile created"
+    ],
+    "dependencies": [
+      "DEP-2026-00001"
+    ],
+    "activities": [
+      "Review traveller information",
+      "Check passport validity",
+      "Confirm initial expedition suitability"
+    ],
+    "requiredEvidence": [
+      "EV-2026-00001"
+    ],
+    "validationRequirements": [
+      "VAL-2026-00001"
+    ],
+    "approvalRequirements": [
+      "APR-2026-00001"
+    ],
+    "exitCriteria": [
+      "Passport dependency satisfied",
+      "Validation passed",
+      "Operations approval granted"
+    ],
+    "risks": [
+      "Traveller documentation incomplete"
+    ],
+    "outputs": [
+      "Traveller qualified for next stage"
+    ],
+    "status": "Completed"
+  },
+  "dependency": {
+    "dependencyId": "DEP-2026-00001",
+    "dependencyName": "Passport Validity Check",
+    "dependencyType": "Document",
+    "scope": "Stage",
+    "status": "Satisfied",
+    "owner": "Operations Manager",
+    "severity": "Critical",
+    "evidenceIds": [
+      "EV-2026-00001"
+    ],
+    "validationIds": [
+      "VAL-2026-00001"
+    ],
+    "approvalIds": [
+      "APR-2026-00001"
+    ],
+    "expiryDate": "2027-12-31"
+  },
+  "evidence": {
+    "evidenceId": "EV-2026-00001",
+    "evidenceType": "Document",
+    "evidenceTitle": "Traveller Passport Copy",
+    "evidenceSource": "Customer",
+    "owner": "Operations Manager",
+    "scope": "Stage",
+    "linkedProjectId": "RF-2026-001",
+    "linkedStageId": "RF-001",
+    "linkedObjectIds": [
+      "DEP-2026-00001"
+    ],
+    "status": "Validated",
+    "storageLocation": "drive://verilogix/rf-2026-001/evidence/passport-copy.pdf",
+    "retentionPolicy": "Operational Records - 3 Years",
+    "validationIds": [
+      "VAL-2026-00001"
+    ],
+    "createdAt": "2026-06-08T12:05:00Z",
+    "updatedAt": "2026-06-08T12:20:00Z"
+  },
+  "validation": {
+    "validationId": "VAL-2026-00001",
+    "validationType": "Document",
+    "scope": "Stage",
+    "rule": "Passport must be present and valid for more than six months from proposed travel date.",
+    "ruleSetId": "RF-QUALIFICATION-RULESET-001",
+    "result": "PASS",
+    "validator": "Operations Manager",
+    "validatorType": "Human",
+    "evidenceIds": [
+      "EV-2026-00001"
+    ],
+    "findings": [],
+    "conditions": [],
+    "linkedProjectId": "RF-2026-001",
+    "linkedStageId": "RF-001",
+    "createdAt": "2026-06-08T12:15:00Z",
+    "updatedAt": "2026-06-08T12:20:00Z"
+  },
+  "approval": {
+    "approvalId": "APR-2026-00001",
+    "approvalType": "Stage Approval",
+    "scope": "Stage",
+    "authority": "Operations Manager",
+    "decision": "Approved",
+    "validationIds": [
+      "VAL-2026-00001"
+    ],
+    "evidenceIds": [
+      "EV-2026-00001"
+    ],
+    "conditions": [],
+    "linkedProjectId": "RF-2026-001",
+    "linkedStageId": "RF-001",
+    "createdAt": "2026-06-08T12:25:00Z",
+    "updatedAt": "2026-06-08T12:25:00Z"
+  },
+  "intelligence": {
+    "intelligenceId": "INT-2026-00001",
+    "category": "Operational",
+    "source": "Traveller Qualification Stage",
+    "observation": "Traveller documentation was complete at first submission, reducing qualification cycle time.",
+    "impact": "Medium",
+    "recommendation": "Keep passport upload as an early mandatory requirement in the traveller intake process.",
+    "status": "Captured",
+    "linkedProjectId": "RF-2026-001",
+    "linkedStageId": "RF-001",
+    "evidenceIds": [
+      "EV-2026-00001"
+    ],
+    "createdAt": "2026-06-08T12:30:00Z",
+    "updatedAt": "2026-06-08T12:30:00Z"
+  }
+}
