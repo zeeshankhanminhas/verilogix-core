@@ -1,0 +1,19 @@
+{
+  "dependencyId": "DEP-2026-00001",
+  "dependencyName": "Passport Validity Check",
+  "dependencyType": "Document",
+  "scope": "Stage",
+  "status": "Satisfied",
+  "owner": "Operations Manager",
+  "severity": "Critical",
+  "evidenceIds": [
+    "EV-2026-00001"
+  ],
+  "validationIds": [
+    "VAL-2026-00001"
+  ],
+  "approvalIds": [
+    "APR-2026-00001"
+  ],
+  "expiryDate": "2027-12-31"
+}
