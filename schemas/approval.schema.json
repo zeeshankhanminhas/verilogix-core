@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/approval.schema.json",
+  "title": "Verilogix Approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["approvalId","approvalType","scope","authority","decision","createdAt"],
+  "properties": {
+    "approvalId": {"type":"string","pattern":"^APR-[0-9]{4}-[0-9]{5}$"},
+    "approvalType": {"type":"string"},
+    "scope": {"type":"string"},
+    "authority": {"type":"string"},
+    "decision": {
+      "type":"string",
+      "enum":["Approved","Approved with Conditions","Rejected","Returned for Revision","Escalated"]
+    },
+    "validationIds": {"type":"array","items":{"type":"string"},"default":[]},
+    "evidenceIds": {"type":"array","items":{"type":"string"},"default":[]},
+    "conditions": {"type":"array","items":{"type":"string"},"default":[]},
+    "linkedProjectId": {"type":"string"},
+    "linkedStageId": {"type":"string"},
+    "createdAt": {"type":"string","format":"date-time"},
+    "updatedAt": {"type":"string","format":"date-time"}
+  }
+}
