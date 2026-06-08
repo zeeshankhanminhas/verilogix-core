@@ -1,0 +1,10 @@
+{
+  "evidenceId": "EV-2026-00001",
+  "evidenceType": "Document",
+  "evidenceTitle": "Traveller Passport Copy",
+  "evidenceSource": "Customer",
+  "owner": "Operations Manager",
+  "scope": "Stage",
+  "linkedProjectId": "RF-2026-001",
+  "linkedStageId": "RF-001",
+ 
