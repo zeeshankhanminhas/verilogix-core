@@ -1,0 +1,18 @@
+{
+  "approvalId": "APR-2026-00001",
+  "approvalType": "Stage Approval",
+  "scope": "Stage",
+  "authority": "Operations Manager",
+  "decision": "Approved",
+  "validationIds": [
+    "VAL-2026-00001"
+  ],
+  "evidenceIds": [
+    "EV-2026-00001"
+  ],
+  "conditions": [],
+  "linkedProjectId": "RF-2026-001",
+  "linkedStageId": "RF-001",
+  "createdAt": "2026-06-08T12:25:00Z",
+  "updatedAt": "2026-06-08T12:25:00Z"
+}
