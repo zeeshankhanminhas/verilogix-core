@@ -1,0 +1,39 @@
+{
+  "stageId": "RF-001",
+  "stageName": "Traveller Qualification",
+  "purpose": "Confirm whether the traveller meets the minimum suitability requirements for the expedition.",
+  "owner": "Operations Manager",
+  "entryCriteria": [
+    "Lead submitted",
+    "Traveller profile created"
+  ],
+  "dependencies": [
+    "DEP-2026-00001"
+  ],
+  "activities": [
+    "Review traveller information",
+    "Check passport validity",
+    "Confirm initial expedition suitability"
+  ],
+  "requiredEvidence": [
+    "EV-2026-00001"
+  ],
+  "validationRequirements": [
+    "VAL-2026-00001"
+  ],
+  "approvalRequirements": [
+    "APR-2026-00001"
+  ],
+  "exitCriteria": [
+    "Passport dependency satisfied",
+    "Validation passed",
+    "Operations approval granted"
+  ],
+  "risks": [
+    "Traveller documentation incomplete"
+  ],
+  "outputs": [
+    "Traveller qualified for next stage"
+  ],
+  "status": "Completed"
+}
