@@ -1,0 +1,16 @@
+{
+  "intelligenceId": "INT-2026-00001",
+  "category": "Operational",
+  "source": "Traveller Qualification Stage",
+  "observation": "Traveller documentation was complete at first submission, reducing qualification cycle time.",
+  "impact": "Medium",
+  "recommendation": "Keep passport upload as an early mandatory requirement in the traveller intake process.",
+  "status": "Captured",
+  "linkedProjectId": "RF-2026-001",
+  "linkedStageId": "RF-001",
+  "evidenceIds": [
+    "EV-2026-00001"
+  ],
+  "createdAt": "2026-06-08T12:30:00Z",
+  "updatedAt": "2026-06-08T12:30:00Z"
+}
