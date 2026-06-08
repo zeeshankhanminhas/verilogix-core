@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/evidence.schema.json",
+  "title": "Verilogix Evidence",
+  "description": "Canonical schema for evidence records within Verilogix Core.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidenceId",
+    "evidenceType",
+    "evidenceTitle",
+    "evidenceSource",
+    "owner",
+    "scope",
+    "status",
+    "createdAt"
+  ],
+  "properties": {
+    "evidenceId": {
+      "type": "string",
+      "pattern": "^EV-[0-9]{4}-[0-9]{5}$"
+    },
+    "evidenceType": {
+      "type": "string",
+      "enum": [
+        "Document",
+        "Image",
+        "Video",
+        "Audio",
+        "Observation",
+        "Assessment",
+        "Approval",
+        "Certificate",
+        "Form",
+        "Contract",
+        "Drawing",
+        "Report",
+        "System Record",
+        "Communication"
+      ]
+    },
+    "evidenceTitle": {
+      "type": "string",
+      "minLength": 3
+    },
+    "evidenceSource": {
+      "type": "string",
+      "enum": [
+        "Customer",
+        "Employee",
+        "Assessor",
+        "Auditor",
+        "Supplier",
+        "System",
+        "AI Agent",
+        "Third Party"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["Project", "Stage", "Task", "Assessment", "Approval", "Risk", "Audit", "Framework"]
+    },
+    "linkedProjectId": {
+      "type": "string"
+    },
+    "linkedStageId": {
+      "type": "string"
+    },
+    "linkedObjectIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "Submitted", "Under Review", "Validated", "Rejected", "Archived", "Superseded"]
+    },
+    "storageLocation": {
+      "type": "string",
+      "description": "Reference to the storage location, file path, URL, or document ID."
+    },
+    "retentionPolicy": {
+      "type": "string"
+    },
+    "validationIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
