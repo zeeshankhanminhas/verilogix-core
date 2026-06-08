@@ -1,0 +1,19 @@
+{
+  "validationId": "VAL-2026-00001",
+  "validationType": "Document",
+  "scope": "Stage",
+  "rule": "Passport must be present and valid for more than six months from proposed travel date.",
+  "ruleSetId": "RF-QUALIFICATION-RULESET-001",
+  "result": "PASS",
+  "validator": "Operations Manager",
+  "validatorType": "Human",
+  "evidenceIds": [
+    "EV-2026-00001"
+  ],
+  "findings": [],
+  "conditions": [],
+  "linkedProjectId": "RF-2026-001",
+  "linkedStageId": "RF-001",
+  "createdAt": "2026-06-08T12:15:00Z",
+  "updatedAt": "2026-06-08T12:20:00Z"
+}
