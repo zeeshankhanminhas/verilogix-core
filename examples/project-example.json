@@ -1,0 +1,20 @@
+{
+  "projectId": "RF-2026-001",
+  "projectName": "Hunza Expedition Qualification",
+  "frameworkId": "FW-RF",
+  "projectType": "Expedition",
+  "purpose": "Determine whether a traveller is suitable for a governed expedition experience.",
+  "owner": "Operations Manager",
+  "stakeholders": ["Traveller", "Guide Coordinator", "Commercial Manager"],
+  "status": "Active",
+  "currentStageId": "RF-001",
+  "stageHistory": [],
+  "dependencyIds": ["DEP-2026-00001"],
+  "evidenceIds": ["EV-2026-00001"],
+  "validationIds": ["VAL-2026-00001"],
+  "approvalIds": ["APR-2026-00001"],
+  "riskIds": [],
+  "intelligenceIds": ["INT-2026-00001"],
+  "createdAt": "2026-06-08T12:00:00Z",
+  "updatedAt": "2026-06-08T12:30:00Z"
+}
