@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/stage.schema.json",
+  "title": "Verilogix Stage",
+  "description": "Canonical schema for a governed stage within Verilogix Core.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stageId",
+    "stageName",
+    "purpose",
+    "owner",
+    "entryCriteria",
+    "exitCriteria",
+    "status"
+  ],
+  "properties": {
+    "stageId": {
+      "type": "string",
+      "pattern": "^[A-Z]+-[0-9]{3}$",
+      "description": "Unique immutable stage identifier. Example: RF-001."
+    },
+    "stageName": {
+      "type": "string",
+      "minLength": 2
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 10
+    },
+    "owner": {
+      "type": "string"
+    },
+    "entryCriteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "dependencies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "activities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "requiredEvidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "validationRequirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "approvalRequirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "exitCriteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "risks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Not Started",
+        "In Progress",
+        "Evidence Submitted",
+        "Validation",
+        "Approval",
+        "Completed",
+        "Blocked",
+        "Rejected",
+        "Returned",
+        "Cancelled"
+      ]
+    }
+  }
+}
