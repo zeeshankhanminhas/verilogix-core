@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/project.schema.json",
+  "title": "Verilogix Project",
+  "description": "Canonical schema for a governed project within Verilogix Core.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "projectId",
+    "projectName",
+    "frameworkId",
+    "projectType",
+    "purpose",
+    "owner",
+    "status",
+    "currentStageId",
+    "createdAt"
+  ],
+  "properties": {
+    "projectId": {
+      "type": "string",
+      "pattern": "^[A-Z]+-[0-9]{4}-[0-9]{3,}$",
+      "description": "Unique immutable project identifier. Example: RF-2026-001."
+    },
+    "projectName": {
+      "type": "string",
+      "minLength": 3
+    },
+    "frameworkId": {
+      "type": "string",
+      "pattern": "^FW-[A-Z0-9-]+$"
+    },
+    "projectType": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 10
+    },
+    "owner": {
+      "type": "string"
+    },
+    "stakeholders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "Active", "On Hold", "Blocked", "Completed", "Cancelled", "Archived"]
+    },
+    "currentStageId": {
+      "type": "string"
+    },
+    "stageHistory": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "dependencyIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "evidenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "validationIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "approvalIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "riskIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "intelligenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
