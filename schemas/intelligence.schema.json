@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://verilogix.dev/schemas/intelligence.schema.json",
+  "title": "Verilogix Intelligence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["intelligenceId","category","source","observation","impact","status","createdAt"],
+  "properties": {
+    "intelligenceId": {"type":"string","pattern":"^INT-[0-9]{4}-[0-9]{5}$"},
+    "category": {
+      "type":"string",
+      "enum":["Operational","Commercial","Technical","Risk","Customer","Governance"]
+    },
+    "source": {"type":"string"},
+    "observation": {"type":"string"},
+    "impact": {"type":"string","enum":["Low","Medium","High","Critical"]},
+    "recommendation": {"type":"string"},
+    "status": {
+      "type":"string",
+      "enum":["Captured","Under Review","Accepted","Rejected","Implemented","Archived"]
+    },
+    "linkedProjectId": {"type":"string"},
+    "linkedStageId": {"type":"string"},
+    "evidenceIds": {"type":"array","items":{"type":"string"},"default":[]},
+    "createdAt": {"type":"string","format":"date-time"},
+    "updatedAt": {"type":"string","format":"date-time"}
+  }
+}
